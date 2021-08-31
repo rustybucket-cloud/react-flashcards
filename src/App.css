@@ -11,12 +11,12 @@
 }
 main {
   max-width: 1000px;
-  min-height: 75vh;
+  min-height: 64vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 header {
@@ -175,4 +175,17 @@ header h1 {
   width: 2rem;
   transform: rotate(90deg) translate(1rem, .75rem);
   color: rgba(0,0,0,0);
+}
+.clicked {
+  transform: scale(.85);
+}
+
+footer {
+  width: 100%;
+  padding: 1em;
+  background: #90bae8;
+}
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
