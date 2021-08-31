@@ -1,11 +1,13 @@
+import arrow from '../images/arrow1.svg';
+
 function Selectors() {
     return (
         <div className="selectors">
             <div className="arrow">
-                <div className="back-arrow" />
+                <img className="back" src={arrow} />
             </div>
             <div className="arrow">
-                <div className="foreward-arrow" />
+                <img className="foreward" src={arrow} />
             </div>
         </div>
     );

@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Korolev', sans-serif;
 }
 
 
@@ -15,10 +16,54 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 header {
-
+  width: 100%;
+  background-color: #90bae8;
+  padding: 2rem 2rem;
+  
+}
+.header-container {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-family: 'Bungee';
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.nav {
+  justify-self: flex-start;
+  margin-left: 3em;
+  gap: 2em;
+}
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  height: 100%;
+}
+.nav li {
+  margin-right: 2em;
+  height: 100%;
+}
+.nav a, .user-info a {
+  text-decoration: none;
+  color: black;
+}
+.nav a:hover, .user-info a:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+.user-info {
+  justify-self: flex-end;
 }
 
 /*add word stlyling*/
@@ -31,9 +76,8 @@ header {
 
 /*card styling*/
 .scene {
-  width: 200px;
+  width: 300px;
   height: 260px;
-  border: 1px solid #CCC;
   margin: auto;
   perspective: 600px;
 }
@@ -45,45 +89,62 @@ header {
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  margin: auto;
 }
 
 .scene .is-flipped {
   transform: rotateY(180deg);
 }
-
+.card * {
+  backface-visibility: hidden;
+}
+.card {
+  border-radius: 12px;
+}
 .card__face {
   position: absolute;
   width: 100%;
   height: 100%;
   line-height: 260px;
-  color: white;
+  color: black;
   text-align: center;
   font-weight: bold;
   font-size: 40px;
   backface-visibility: hidden;
+  border-radius: 10px;
 }
 
 .card__face--front {
-  background: red;
+  background: #9EE6FF;
 }
 
 .card__face--back {
-  background: blue;
+  background: #9EE6FF;
   transform: rotateY(180deg);
 }
 
 /*selector styling*/
 .selectors {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 .arrow {
+  background: #9490E8;
   height: 5rem;
-  width: 5rem;
-  border: 5px solid black;
+  width: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+}
+.arrow img {
+  width: 50%;
+}
+.back {
+  transform: rotate(180deg) translateX(.5em);
+}
+.foreward {
+  transform: translateX(.5em);
 }
 .back-arrow {
   background-color: black;
